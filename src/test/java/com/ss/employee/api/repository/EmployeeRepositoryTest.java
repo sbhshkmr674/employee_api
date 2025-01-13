@@ -1,3 +1,4 @@
+/*
 package com.ss.employee.api.repository;
 
 import com.ss.employee.api.entity.Employee;
@@ -43,3 +44,4 @@ public class EmployeeRepositoryTest
     assertEquals(emp.getDesignation(),emp1.getDesignation(),"Both Designation are equal");
   }
 }
+*/

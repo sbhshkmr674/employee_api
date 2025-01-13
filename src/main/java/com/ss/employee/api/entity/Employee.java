@@ -3,6 +3,8 @@ package com.ss.employee.api.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -10,7 +12,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name="Employee")
-public class Employee
+public class Employee implements Serializable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,21 +27,5 @@ public class Employee
 
     @Column(name="designation")
     private String designation;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
