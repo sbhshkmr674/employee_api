@@ -1,16 +1,22 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Build : Maven Install') {
             steps {
                 echo 'Building...'
-                // Add your build steps here
+                sh 'mvn clean install -DskipTests'
             }
         }
-        stage('Test') {
+        stage('Maven Test') {
             steps {
                 echo 'Testing...'
-                // Add your test steps here
+               sh 'mvn clean test'
+            }
+        }
+        stage('Maven Package'){
+            steps{
+                echo 'Package Clean'
+                sh 'mvn clean package -DskipTests'
             }
         }
         stage('Deploy') {
